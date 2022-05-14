@@ -653,7 +653,7 @@ export const initialData = [
         passenger: { name: "", surname: "", gender: "", tcNo: "" },
       },
       {
-        selected: 1,
+        selected: 0,
         reserved: 0,
         number: 3,
         passenger: { name: "", surname: "", gender: "", tcNo: "" },

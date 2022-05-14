@@ -5,33 +5,12 @@ import "./BusLayout2.css";
 import { selectDeselect } from "../../store/travel";
 
 const BusLayout2 = (props) => {
-  const {
-    selectedTravel,
-    selectedSeats,
-    setSelectedSeats,
-    seatData,
-    setSeatData,
-  } = props;
+  const { selectedTravel } = props;
 
   const dispatch = useDispatch();
 
-  const updateItem = (number, itemAttributes) => {
-    let index = seatData.findIndex((x) => x.number === number);
-    if (index === -1) {
-    }
-    // handle error
-    else {
-      setSeatData([
-        ...seatData.slice(0, index),
-        Object.assign({}, seatData[index], itemAttributes),
-        ...seatData.slice(index + 1),
-      ]);
-    }
-  };
-
   const onClick = (number, gender) => (e) => {
-    let clickedSeat = seatData.find((x) => x.number == number);
-
+    let clickedSeat = selectedTravel.seats.find((x) => x.number == number);
     dispatch(selectDeselect({ clickedSeat, selectedTravel }));
 
     // const onClick = (number, gender) => (e) => {
@@ -65,7 +44,7 @@ const BusLayout2 = (props) => {
     <div className="bus-component__2">
       <div>
         <div className="bus-component__2__right">
-          {seatData
+          {selectedTravel.seats
             .slice(22, 44)
             .flatMap((seat, index) =>
               seat.number % 2 == 0 ? (
@@ -80,7 +59,7 @@ const BusLayout2 = (props) => {
             )}
         </div>
         <div className="bus-component__2__right__window">
-          {seatData
+          {selectedTravel.seats
             .slice(22, 44)
             .flatMap((seat, index) =>
               seat.number % 2 == 1 ? (
@@ -98,7 +77,7 @@ const BusLayout2 = (props) => {
 
       <div>
         <div className="bus-component__2__right">
-          {seatData
+          {selectedTravel.seats
             .slice(0, 22)
             .flatMap((seat, index) =>
               seat.number % 2 == 0 ? (
@@ -113,7 +92,7 @@ const BusLayout2 = (props) => {
             )}
         </div>
         <div className="bus-component__2__right__window">
-          {seatData
+          {selectedTravel.seats
             .slice(0, 22)
             .flatMap((seat, index) =>
               seat.number % 2 == 1 ? (

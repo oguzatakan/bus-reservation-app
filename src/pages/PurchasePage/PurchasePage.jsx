@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import AddPassengerComponent from "../../components/AddPassengerComponent/AddPassengerComponent";
+import { selectDeselect, updatePassengerData } from "../../store/travel";
 import "./PurchasePage.css";
 const PurchasePage = () => {
   const location = useLocation();
 
-  const [seats, setSeats] = useState([]);
+  const dispatch = useDispatch();
+
+  const selectedSeatData = useSelector(
+    (state) => state.travel.selectedSeatData
+  );
+
   const [travel, setTravel] = useState();
   const [customerDetail, setCustomerDetail] = useState({
     name: "",
@@ -22,18 +29,35 @@ const PurchasePage = () => {
     if (location.state === null) {
       navigate("/");
     } else {
-      setSeats(location.state.selectedSeats);
+      // setSeats(location.state.selectedSeats);
       setTravel(location.state.travel);
     }
   }, [location.state]);
 
   const onDeleteClick = (number) => (e) => {
-    const tmpSelectedSeats = seats.filter((item) => item.number !== number);
-    console.log("Kalanlar: ", tmpSelectedSeats);
+    const removeSeat = selectedSeatData.find((item) => item.number === number);
+
+    console.log("removeSeat", removeSeat);
+    console.log("travel", travel);
+    dispatch(
+      selectDeselect({ clickedSeat: { ...removeSeat }, selectedTravel: travel })
+    );
+
+    const tmpSelectedSeats = selectedSeatData.filter(
+      (item) => item.number !== number
+    );
+    dispatch(selectDeselect({ seats: tmpSelectedSeats }));
+
     if (tmpSelectedSeats.length == 0) {
       navigate("/");
     }
-    setSeats(tmpSelectedSeats);
+
+    // const tmpSelectedSeats = seats.filter((item) => item.number !== number);
+    // console.log("Kalanlar: ", tmpSelectedSeats);
+    // if (tmpSelectedSeats.length == 0) {
+    //   navigate("/");
+    // }
+    // setSeats(tmpSelectedSeats);
   };
 
   const onPurchase = () => {
@@ -52,21 +76,21 @@ const PurchasePage = () => {
   };
 
   const onChangePassenger = (e, number) => {
-    const { name, value, checked } = e.target;
-    let list = [...seats];
-    list.forEach((x) => {
-      if (x.number === number) {
-        x.passenger[name] = value;
-      }
-    });
-    setSeats(list);
+    // const { name, value, checked } = e.target;
+    // let list = [...seats];
+    // list.forEach((x) => {
+    //   if (x.number === number) {
+    //     x.passenger[name] = value;
+    //   }
+    // });
+    // setSeats(list);
   };
 
   return (
     <div className="purchase-page-div">
       <h1>PurchasePage</h1>
       <div className="purchase-page-passenger-data">
-        {seats.map((tmp, index) => {
+        {selectedSeatData.map((tmp, index) => {
           return (
             <AddPassengerComponent
               onChange={onChangePassenger}

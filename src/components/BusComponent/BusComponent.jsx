@@ -7,45 +7,44 @@ import SeatComponent from "../SeatComponent/SeatComponent";
 import "./BusComponent.css";
 import { data } from "../../data/travels";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const BusComponent = (props) => {
   const navigate = useNavigate();
 
-  const travel = props.data;
+  //const travel = props.data;
 
-  const [selectedSeats, setSelectedSeats] = useState([]);
-  const [seatData, setSeatData] = useState(travel.seats);
+  const travelRedux = useSelector((state) => state.travel.travels);
+  const selectedSeatData = useSelector(
+    (state) => state.travel.selectedSeatData
+  );
+
+  const [travel, setTravel] = useState(props.data);
 
   const applySelection = () => {
-    console.log(selectedSeats);
     navigate("/purchase", {
-      state: { selectedSeats: selectedSeats, travel: travel },
+      state: { selectedSeats: selectedSeatData, travel: travel },
     });
   };
+
+  useEffect(() => {
+    if (travelRedux !== undefined) {
+      const tmp = travelRedux.find((x) => x.id == travel.id);
+      setTravel(tmp);
+    }
+  }, [travelRedux]);
 
   return (
     <div>
       <div className="bus-component__wrapper">
         {travel.busType == 1 ? (
-          <BusLayout1
-            selectedTravel={travel}
-            seatData={seatData}
-            setSeatData={setSeatData}
-            selectedSeats={selectedSeats}
-            setSelectedSeats={setSelectedSeats}
-          />
+          <BusLayout2 selectedTravel={travel} />
         ) : (
-          <BusLayout2
-            selectedTravel={travel}
-            seatData={seatData}
-            setSeatData={setSeatData}
-            selectedSeats={selectedSeats}
-            setSelectedSeats={setSelectedSeats}
-          />
+          <BusLayout2 selectedTravel={travel} />
         )}
       </div>
       <div className="bus-component__buy_button__wrapper">
-        {selectedSeats.length > 0 ? (
+        {selectedSeatData.length > 0 ? (
           <button
             onClick={() => applySelection()}
             className="bus-component__buy_button"
