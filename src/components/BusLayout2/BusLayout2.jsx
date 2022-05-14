@@ -31,7 +31,7 @@ const BusLayout2 = (props) => {
 
   const onClick = (number, gender) => (e) => {
     let clickedSeat = seatData.find((x) => x.number == number);
-   
+
     dispatch(selectDeselect({ clickedSeat, selectedTravel }));
 
     // const onClick = (number, gender) => (e) => {

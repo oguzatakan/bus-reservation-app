@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 const TicketScreen = () => {
   const params = useParams();
-  const travelData = useSelector((state) => state.travel.value);
+  const travelData = useSelector((state) => state.travel);
   const { from, to, date } = params;
 
   const [company, setCompany] = useState("");
@@ -30,6 +30,7 @@ const TicketScreen = () => {
 
   return (
     <div className="ticket-screen-div">
+      <h2>{JSON.stringify(travelData.travels[2].seats[1])}</h2>
       <select
         className="travel-select"
         name="from"
@@ -45,10 +46,10 @@ const TicketScreen = () => {
         ))}
       </select>
 
-      {applyFilter(travelData).length == 0 ? (
+      {applyFilter(travelData.travels).length == 0 ? (
         <h2>Sefer Bulunamadi!</h2>
       ) : (
-        <List data={applyFilter(travelData)} />
+        <List data={applyFilter(travelData.travels)} />
       )}
     </div>
   );
