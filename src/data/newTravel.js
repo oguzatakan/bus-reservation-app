@@ -3,6 +3,7 @@ export const newTravel = {
   price: "",
   company: "",
   from: "",
+  duration:"",
   plate: "",
   to: "",
   date: "",

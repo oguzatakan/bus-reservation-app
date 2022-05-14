@@ -1,0 +1,43 @@
+.trip-details__wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.trip-details__components {
+  user-select: none;
+  width: 813px;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #efdeff;
+  margin: 20px 20px 50px 20px;
+  border-radius: 25px;
+}
+
+.trip-details-company {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.trip-details-company-text {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.trip-details-row {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trip-details-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.trip-details-more {
+  cursor: pointer;
+  user-select: none;
+}
