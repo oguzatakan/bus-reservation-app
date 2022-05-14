@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import TicketScreen from "./pages/TicketScreen/TicketScreen";
 import TravelPanel from "./pages/TravelPanel/TravelPanel";
+import PurchasePage from "./pages/PurchasePage/PurchasePage";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ function App() {
           <Route path=":travel" element={<TicketScreen />} />
         </Route>
         <Route path="/travelPanel" element={<TravelPanel />} />
+        <Route path="/purchase" element={<PurchasePage />} />
       </Routes>
     </BrowserRouter>
   );

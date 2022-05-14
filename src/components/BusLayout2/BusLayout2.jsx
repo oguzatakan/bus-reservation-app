@@ -20,14 +20,7 @@ const BusLayout2 = (props) => {
     }
   };
 
-  useEffect(() => {
-    console.log(seatData);
-  }, [seatData]);
-
-  useEffect(() => {
-    console.log("selected seats: ", selectedSeats);
-  }, [selectedSeats]);
-
+ 
   const onClick = (number, gender) => (e) => {
     let clickedSeat = seatData.find((x) => x.number == number);
     if (clickedSeat.reserved == 0 && clickedSeat.selected == 0) {

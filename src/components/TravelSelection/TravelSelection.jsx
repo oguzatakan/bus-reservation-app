@@ -11,10 +11,11 @@ const TravelSelection = () => {
   });
 
   const cities = [
-    { value: "Edirne", name: "Edirne" },
-    { value: "Ankara", name: "Ankara" },
-    { value: "Canakkale", name: "Canakkale" },
-    { value: "Istanbul", name: "Istanbul" },
+    { value: "Edirne", name: "Edirne Otogari" },
+    { value: "Ankara", name: "Ankara Otogari" },
+    { value: "Canakkale", name: "Canakkale Otogari" },
+    { value: "Istanbul-Esenler", name: "Istanbul Esenler Otogari" },
+    { value: "Istanbul-Samandira", name: "Istanbul Samandira Otogari" },
   ];
 
   const onChangeHandler = (e) => {

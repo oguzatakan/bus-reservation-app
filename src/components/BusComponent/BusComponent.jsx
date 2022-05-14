@@ -6,12 +6,20 @@ import AddPassengerComponent from "../AddPassengerComponent/AddPassengerComponen
 import SeatComponent from "../SeatComponent/SeatComponent";
 import "./BusComponent.css";
 import { data } from "../../data/travels";
+import { useNavigate } from "react-router-dom";
 
 const BusComponent = (props) => {
+  const navigate = useNavigate();
+
   const travel = props.data;
 
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [seatData, setSeatData] = useState(travel.seats);
+
+  const applySelection = () => {
+    console.log(selectedSeats);
+    navigate("/purchase", { state: selectedSeats });
+  };
 
   return (
     <div>
@@ -34,27 +42,18 @@ const BusComponent = (props) => {
           />
         )}
       </div>
-      {/* <div className="bus-component__passenger">
-        {selectedSeats.map((tmp, index) => {
-          return (
-            <AddPassengerComponent
-              onChange={onChange}
-              onClick={onClick(tmp.number)}
-              data={tmp}
-              key={tmp.number}
-            />
-          );
-        })}
-      </div> */}
-      {/* <div className="bus-component__buy_button__wrapper">
+      <div className="bus-component__buy_button__wrapper">
         {selectedSeats.length > 0 ? (
-          <button className="bus-component__buy_button" onClick={buy}>
+          <button
+            onClick={() => applySelection()}
+            className="bus-component__buy_button"
+          >
             Satin Al
           </button>
         ) : (
           <div></div>
         )}
-      </div> */}
+      </div>
     </div>
   );
 };
