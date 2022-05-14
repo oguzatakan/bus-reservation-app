@@ -37,7 +37,6 @@ const TravelSelection = () => {
         className="travel-select"
         name="from"
         placeholder="Nereden"
-        defaultValue={travelData.from}
         value={travelData.from}
         onChange={(e) => onChangeHandler(e)}
       >
@@ -54,7 +53,6 @@ const TravelSelection = () => {
         name="to"
         className="travel-select"
         placeholder="Nereye"
-        defaultValue={travelData.to}
         value={travelData.to}
         onChange={(e) => onChangeHandler(e)}
       >

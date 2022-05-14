@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import List from "../../components/List/List";
 import "./TicketScreen.css";
-//import { data } from "../../data/travels";
-import { useParams } from "react-router-dom";
+
+import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 const TicketScreen = () => {
+  let navigate = useNavigate();
   const params = useParams();
-  const travelData = useSelector((state) => state.travel);
+  const travelData = useSelector((state) => state.travel.travels);
   const { from, to, date } = params;
 
   const [company, setCompany] = useState("");
@@ -28,14 +30,20 @@ const TicketScreen = () => {
     { value: "Truva", name: "Truva" },
   ];
 
+  const onClick = () => {
+    console.log("data", travelData);
+    navigate("/");
+  };
+
   return (
     <div className="ticket-screen-div">
-      <h2>{JSON.stringify(travelData.travels[2].seats[1])}</h2>
+      <button className="ticket-screen-back-btn" onClick={() => onClick()}>
+        Anasayfa
+      </button>
       <select
         className="travel-select"
         name="from"
         placeholder="Nereden"
-        defaultValue={company}
         value={company}
         onChange={(e) => setCompany(e.target.value)}
       >
@@ -46,10 +54,10 @@ const TicketScreen = () => {
         ))}
       </select>
 
-      {applyFilter(travelData.travels).length == 0 ? (
+      {applyFilter(travelData).length == 0 ? (
         <h2>Sefer Bulunamadi!</h2>
       ) : (
-        <List data={applyFilter(travelData.travels)} />
+        <List data={applyFilter(travelData)} />
       )}
     </div>
   );

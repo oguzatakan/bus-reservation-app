@@ -3,8 +3,18 @@ import BusComponent from "../BusComponent/BusComponent";
 import "./TripDetails.css";
 
 const TripDetails = (props) => {
-  const { busType, company, price, duration, plate, from, to, seats, date } =
-    props.data;
+  const {
+    busType,
+    id,
+    company,
+    price,
+    duration,
+    plate,
+    from,
+    to,
+    seats,
+    date,
+  } = props.data;
 
   const [expand, setExpand] = useState(false);
 
@@ -37,7 +47,7 @@ const TripDetails = (props) => {
 
         <div className="trip-details__col">
           <div style={{ display: expand == true ? "block" : "none" }}>
-            <BusComponent data={props.data} />
+            <BusComponent seats={seats} busType={busType} travelId={id} />
           </div>
         </div>
 
@@ -50,38 +60,6 @@ const TripDetails = (props) => {
           {expand == true ? "▲" : "▼"}
         </h1>
       </div>
-
-      {/* <div className="trip-details__components">
-        <div className="trip-details__info">
-          <h2 className="trip-details__place">
-            {from} {"  -  "}
-            {to}
-          </h2>
-          <h2 className="trip-details__company">
-            {company}
-            {"  -  Tip "}
-            {busType}
-          </h2>
-          <h2 className="trip-details__company">{plate}</h2>
-          <div className="trip-details__row">
-            <h2 className="trip-details__date">{date}</h2>
-            <h2 className="trip-details__price">{price}</h2>
-          </div>
-        </div>
-        <div className="trip-details__col">
-          <div style={{ display: expand == true ? "block" : "none" }}>
-            {/* <BusComponent data={props.data} /> 
-          </div>
-        </div>
-        <h1
-          className="trip-details__show__more"
-          onClick={() => {
-            setExpand(!expand);
-          }}
-        >
-          {expand == true ? "▲" : "…"}
-        </h1>
-      </div> */}
     </div>
   );
 };

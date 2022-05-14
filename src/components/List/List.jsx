@@ -6,8 +6,8 @@ const List = (props) => {
 
   return (
     <div>
-      {data.map((x, index) => {
-        return <TripDetails data={x} key={index} />;
+      {data.map((trip, index) => {
+        return <TripDetails data={trip} key={index} />;
       })}
     </div>
   );

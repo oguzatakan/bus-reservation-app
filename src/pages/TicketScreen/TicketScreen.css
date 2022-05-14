@@ -4,3 +4,28 @@
   flex-direction: column;
   justify-items: center;
 }
+
+.ticket-screen-back-btn {
+  width: 10%;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #d7b6f3;
+}
+
+.ticket-screen-back-btn:hover {
+  background-color: #f6ecff;
+  color: white;
+}
