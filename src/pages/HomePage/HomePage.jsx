@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import TravelSelection from "../../components/TravelSelection/TravelSelection";
 
-import "./HomePage.css"
+import "./HomePage.css";
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <div>
+      <TravelSelection />
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;
