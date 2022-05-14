@@ -6,31 +6,17 @@ import { useParams } from "react-router-dom";
 const TicketScreen = () => {
   const params = useParams();
 
+  const { from, to, date } = params;
+
   const [company, setCompany] = useState("");
-  const [travelData, setTravelData] = useState({
-    from: "",
-    to: "",
-    date: "",
-  });
-
-  useEffect(() => {
-    const arr = params.travel.split(",");
-    const tmp = {
-      from: arr[0],
-      to: arr[1],
-      date: arr[2],
-    };
-
-    setTravelData(tmp);
-  }, [params]);
 
   const applyFilter = (data) => {
     return data.filter(
       (x) =>
         (company === "" ? true : x.company === company) &&
-        x.from === travelData.from &&
-        x.to === travelData.to &&
-        x.date === travelData.date
+        x.from === from &&
+        x.to === to &&
+        x.date === date
     );
   };
 
