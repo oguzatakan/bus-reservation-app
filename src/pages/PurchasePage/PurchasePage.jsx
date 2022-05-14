@@ -5,8 +5,8 @@ import "./PurchasePage.css";
 const PurchasePage = () => {
   const location = useLocation();
 
-  const [seats, setSeats] = useState(location.state.selectedSeats);
-  const [travel, setTravel] = useState(location.state.travel);
+  const [seats, setSeats] = useState([]);
+  const [travel, setTravel] = useState();
   const [customerDetail, setCustomerDetail] = useState({
     name: "",
     surname: "",
@@ -21,19 +21,18 @@ const PurchasePage = () => {
   useEffect(() => {
     if (location.state === null) {
       navigate("/");
+    } else {
+      setSeats(location.state.selectedSeats);
+      setTravel(location.state.travel);
     }
-  }, [seats]);
-
-  useEffect(() => {
-    console.log("koltuklar", seats);
-    if (seats.length == 0) {
-      navigate("/");
-    }
-  }, [seats]);
+  }, [location.state]);
 
   const onDeleteClick = (number) => (e) => {
     const tmpSelectedSeats = seats.filter((item) => item.number !== number);
     console.log("Kalanlar: ", tmpSelectedSeats);
+    if (tmpSelectedSeats.length == 0) {
+      navigate("/");
+    }
     setSeats(tmpSelectedSeats);
   };
 
