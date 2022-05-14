@@ -18,7 +18,9 @@ const BusComponent = (props) => {
 
   const applySelection = () => {
     console.log(selectedSeats);
-    navigate("/purchase", { state: selectedSeats });
+    navigate("/purchase", {
+      state: { selectedSeats: selectedSeats, travel: travel },
+    });
   };
 
   return (

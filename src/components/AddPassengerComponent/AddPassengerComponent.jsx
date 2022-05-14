@@ -9,26 +9,6 @@ const AddPassengerComponent = (props) => {
 
   return (
     <div className="add-passenger__wrapper">
-      {/* <div className="add-passenger__form">
-        <h3>Secilen Koltuk No: {number}</h3>
-        <div className="add-passenger__row">
-          <input type="text" placeholder="isim"></input>
-          <input type="text" placeholder="soyisim"></input>
-        </div>
-        <input type="text" placeholder="tc"></input>
-
-        <label for="gender"> Select you gender</label>
-        <select name="gender">
-          <option value="none" selected>
-            Cinsiyet
-          </option>
-          <option value="female">Erkek</option>
-          <option value="male">Kadin</option>
-        </select>
-        <button className="add-passenger__form__remove__btn" type="submit">
-          Kaldir
-        </button>
-      </div> */}
       <form onSubmit={handleSubmit} className="add-passenger__form">
         <div className="add-passenger__form__remove__btn__wrapper">
           <button
