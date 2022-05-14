@@ -26,7 +26,7 @@ const TravelSelection = () => {
   const onClick = () => {
     console.log("data", travelData);
     navigate(
-      "/ticket/" + travelData.from + "#" + travelData.to + "#" + travelData.date
+      "/ticket/" + travelData.from + "," + travelData.to + "," + travelData.date
     );
   };
 

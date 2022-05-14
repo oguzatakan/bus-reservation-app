@@ -1,0 +1,6 @@
+.ticket-screen-div {
+  display: flex;
+  margin: 10vh 2% 0 2%;
+  flex-direction: column;
+  justify-items: center;
+}
