@@ -1,14 +1,15 @@
 .travel-div {
-  background-color: #f2ffe8;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 30px;
-  margin: 100px 30% 0 30%;
+  margin: 30px 30% 0 30%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .travel-btn {
+  border-radius: 10px;
   background-color: #4caf50; /* Green */
   border: none;
   color: white;
@@ -22,16 +23,17 @@
   cursor: pointer;
   background-color: white;
   color: black;
-  border: 2px solid #4caf50;
+  border: 2px solid #d7b6f3;
 }
 
 .travel-btn:hover {
-  background-color: #4caf50;
+  background-color: #f6ecff;
   color: white;
 }
 
 .travel-select {
-  background-color: #4caf50; /* Green */
+  border-radius: 10px;
+  background-color: #f6ecff; /* Green */
   border: none;
   color: white;
   padding: 5px;
@@ -44,5 +46,5 @@
   cursor: pointer;
   background-color: white;
   color: black;
-  border: 2px solid #4caf50;
+  border: 2px solid #d7b6f3;
 }

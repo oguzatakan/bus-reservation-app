@@ -1,0 +1,38 @@
+.admin-img {
+  border-radius: 50%;
+  width: 60px;
+}
+
+.home-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-name-div {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.name-div {
+  margin: 25vh 40px 20px;
+  font-weight: 700;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.admin-img:hover {
+  cursor: pointer;
+}
+
+.admin-div {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
