@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import SeatComponent from "../SeatComponent/SeatComponent";
 import "./BusLayout2.css";
+import { selectDeselect } from "../../store/travel";
 
 const BusLayout2 = (props) => {
-  const { data, selectedSeats, setSelectedSeats, seatData, setSeatData } =
-    props;
+  const {
+    selectedTravel,
+    selectedSeats,
+    setSelectedSeats,
+    seatData,
+    setSeatData,
+  } = props;
+
+  const dispatch = useDispatch();
 
   const updateItem = (number, itemAttributes) => {
     let index = seatData.findIndex((x) => x.number === number);
@@ -20,32 +29,36 @@ const BusLayout2 = (props) => {
     }
   };
 
- 
   const onClick = (number, gender) => (e) => {
     let clickedSeat = seatData.find((x) => x.number == number);
-    if (clickedSeat.reserved == 0 && clickedSeat.selected == 0) {
-      if (selectedSeats.length < 4) {
-        clickedSeat.selected = 1;
-        // clickedSeat.gender = gender;
-        console.log(clickedSeat);
-        updateItem(number, clickedSeat);
-        let tmpSelectedSeats = [...selectedSeats];
-        tmpSelectedSeats.push(clickedSeat);
-        setSelectedSeats(tmpSelectedSeats);
-      } else {
-        alert("Max 4 koltuk secilebilir!");
-      }
-    } else if (clickedSeat.reserved == 0 && clickedSeat.selected == 1) {
-      clickedSeat.selected = 0;
-      // clickedSeat.gender = "";
-      // setSelectedSeats(selectedSeats.pop());
-      let tmpSelectedSeats = selectedSeats.filter(
-        (item) => item.number !== number
-      );
-      setSelectedSeats([...tmpSelectedSeats]);
-    } else {
-      alert("Bu koltuk secilemez!");
-    }
+   
+    dispatch(selectDeselect({ clickedSeat, selectedTravel }));
+
+    // const onClick = (number, gender) => (e) => {
+    //   let clickedSeat = seatData.find((x) => x.number == number);
+    //   if (clickedSeat.reserved == 0 && clickedSeat.selected == 0) {
+    //     if (selectedSeats.length < 4) {
+    //       clickedSeat.selected = 1;
+    //       // clickedSeat.gender = gender;
+    //       console.log(clickedSeat);
+    //       updateItem(number, clickedSeat);
+    //       let tmpSelectedSeats = [...selectedSeats];
+    //       tmpSelectedSeats.push(clickedSeat);
+    //       setSelectedSeats(tmpSelectedSeats);
+    //     } else {
+    //       alert("Max 4 koltuk secilebilir!");
+    //     }
+    //   } else if (clickedSeat.reserved == 0 && clickedSeat.selected == 1) {
+    //     clickedSeat.selected = 0;
+    //     // clickedSeat.gender = "";
+    //     // setSelectedSeats(selectedSeats.pop());
+    //     let tmpSelectedSeats = selectedSeats.filter(
+    //       (item) => item.number !== number
+    //     );
+    //     setSelectedSeats([...tmpSelectedSeats]);
+    //   } else {
+    //     alert("Bu koltuk secilemez!");
+    //   }
   };
 
   return (

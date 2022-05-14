@@ -28,19 +28,19 @@ const BusComponent = (props) => {
       <div className="bus-component__wrapper">
         {travel.busType == 1 ? (
           <BusLayout1
+            selectedTravel={travel}
             seatData={seatData}
             setSeatData={setSeatData}
             selectedSeats={selectedSeats}
             setSelectedSeats={setSelectedSeats}
-            data={data}
           />
         ) : (
           <BusLayout2
+            selectedTravel={travel}
             seatData={seatData}
             setSeatData={setSeatData}
             selectedSeats={selectedSeats}
             setSelectedSeats={setSelectedSeats}
-            data={data}
           />
         )}
       </div>

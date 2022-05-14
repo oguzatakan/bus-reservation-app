@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import List from "../../components/List/List";
 import "./TicketScreen.css";
-import { data } from "../../data/travels";
+//import { data } from "../../data/travels";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 const TicketScreen = () => {
   const params = useParams();
-
+  const travelData = useSelector((state) => state.travel.value);
   const { from, to, date } = params;
 
   const [company, setCompany] = useState("");
@@ -44,10 +45,10 @@ const TicketScreen = () => {
         ))}
       </select>
 
-      {applyFilter(data).length == 0 ? (
+      {applyFilter(travelData).length == 0 ? (
         <h2>Sefer Bulunamadi!</h2>
       ) : (
-        <List data={applyFilter(data)} />
+        <List data={applyFilter(travelData)} />
       )}
     </div>
   );
