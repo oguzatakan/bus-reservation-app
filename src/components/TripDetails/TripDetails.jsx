@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import BusComponent from "../BusComponent/BusComponent";
 import "./TripDetails.css";
 
 const TripDetails = (props) => {
@@ -31,15 +31,16 @@ const TripDetails = (props) => {
         <div className="trip-details-row">
           <span className="trip-details-text">Seyahat Suresi: {duration}</span>
           <span className="trip-details-text">
-            Koltuk Sayisi {busType === 1 ? "44" : "33"}
+            Koltuk Sayisi {busType === 1 ? "33" : "44"}
           </span>
         </div>
 
         <div className="trip-details__col">
           <div style={{ display: expand == true ? "block" : "none" }}>
-            {/* <BusComponent data={props.data} />  */}
+            <BusComponent data={props.data} />
           </div>
         </div>
+
         <h1
           className="trip-details-more"
           onClick={() => {

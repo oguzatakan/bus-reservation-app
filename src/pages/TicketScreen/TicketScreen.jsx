@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import List from "../../components/TravelSelection/List/List";
+import List from "../../components/List/List";
 import "./TicketScreen.css";
 import { data } from "../../data/travels";
 import { useParams } from "react-router-dom";

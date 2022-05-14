@@ -1,0 +1,23 @@
+.bus-component__2 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.bus-component__2__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.bus-component__2__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.bus-component__2__right__window {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

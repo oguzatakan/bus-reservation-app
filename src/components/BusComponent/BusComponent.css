@@ -1,0 +1,27 @@
+.bus-component__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.bus-component__passenger {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bus-component__buy_button__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bus-component__buy_button {
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 25px;
+  background-color: rgb(80, 80, 231);
+  color: white;
+  font-weight: 800;
+}

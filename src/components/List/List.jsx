@@ -1,5 +1,5 @@
 import React from "react";
-import TripDetails from "../../TripDetails/TripDetails";
+import TripDetails from "../TripDetails/TripDetails";
 
 const List = (props) => {
   const { data } = props;
@@ -7,7 +7,7 @@ const List = (props) => {
   return (
     <div>
       {data.map((x, index) => {
-       return <TripDetails data={x} key={index} />;
+        return <TripDetails data={x} key={index} />;
       })}
     </div>
   );
