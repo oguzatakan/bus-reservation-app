@@ -1,12 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import TravelSelection from "../../components/TravelSelection/TravelSelection";
 
 import "./HomePage.css";
 
 const HomePage = () => {
+  let navigate = useNavigate()
   return (
     <div className="home-div">
-      <div className="admin-div">
+      <div className="admin-div" onClick={()=>navigate("/travelPanel")}>
         <img
           className="admin-img"
           src="https://pos.bakiyem.com/surucuimg/0C6299908F669B21AA05485DC74D8D05.jpeg"
