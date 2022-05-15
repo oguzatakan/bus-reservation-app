@@ -7,6 +7,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://iatkv.tmgrup.com.tr/0d865e/600/314/0/104/724/483?u=https://itkv.tmgrup.com.tr/2019/01/02/hadi-ipucu-sorusu-farsca-gokyuzu-ne-demek-gokyuzu-anlamina-gelen-isim-nedir-2-ocak-hadi-yarismasi-1546417173627.jpg");
 }
 
 .project-name-div {

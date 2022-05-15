@@ -37,8 +37,8 @@ const BusComponent = (props) => {
       <div className="bus-component__buy_button__wrapper">
         {selectedSeatData.length > 0 ? (
           <button
+            className="bus-component__buy__button"
             onClick={() => applySelection()}
-            className="bus-component__buy_button"
           >
             Bilet Satın Al
           </button>

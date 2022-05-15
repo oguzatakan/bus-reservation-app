@@ -85,7 +85,15 @@ const PurchasePage = () => {
         })
       );
 
-      navigate("/");
+      let data = {
+        seats: selectedSeatData,
+        travel: travel,
+        name: customerDetail.name,
+        surname: customerDetail.surname,
+        email: customerDetail.email,
+      };
+
+      navigate("/purchaseResult", { state: data });
     } else {
       if (passengerCheckError == true) {
         alert(
@@ -131,7 +139,7 @@ const PurchasePage = () => {
             <h3>{travel.date}</h3>
             <h3>{travel.hour}</h3>
             <h3>{travel.company}</h3>
-            <h3>Toplam Tutar:{" "}{travel.price * selectedSeatData.length}₺</h3>
+            <h3>Toplam Tutar: {travel.price * selectedSeatData.length}₺</h3>
           </div>
         )}
         <input
@@ -162,14 +170,6 @@ const PurchasePage = () => {
           name="cardNumber"
           placeholder="Card Number"
           value={customerDetail.cardNumber}
-          onChange={(e) => onChangeCustomerHandler(e)}
-        />
-        <input
-          type="text"
-          className="travel-select"
-          name="hour"
-          placeholder="Saat"
-          value={customerDetail.hour}
           onChange={(e) => onChangeCustomerHandler(e)}
         />
         <input

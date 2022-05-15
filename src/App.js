@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import TicketScreen from "./pages/TicketScreen/TicketScreen";
 import TravelPanel from "./pages/TravelPanel/TravelPanel";
 import PurchasePage from "./pages/PurchasePage/PurchasePage";
+import PurchaseResult from "./pages/PurchaseResult/PurchaseResult";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
         </Route>
         <Route path="/travelPanel" element={<TravelPanel />} />
         <Route path="/purchase" element={<PurchasePage />} />
+        <Route path="/purchaseResult" element={<PurchaseResult />} />
       </Routes>
     </BrowserRouter>
   );

@@ -23,6 +23,7 @@ const TravelPanel = () => {
     from: "Edirne",
     duration: "",
     plate: "",
+    hour: "",
     to: "Canakkale",
     date: "",
     seats: [],
@@ -90,6 +91,11 @@ const TravelPanel = () => {
     <div>
       {login == true ? (
         <div>
+          <div className="travel-panel-back-btn-wrapper">
+          <button className="travel-panel-back-btn" onClick={() => navigate("/")}>
+          ⤾ 
+      </button>
+          </div>
           <div className="purchase-page-customer">
             <h3>Seyahat Oluşturma Paneli</h3>
             <input
@@ -158,6 +164,14 @@ const TravelPanel = () => {
               name="plate"
               placeholder="Araç Plakası"
               value={travelDetail.plate}
+              onChange={(e) => onChangeTravelHandler(e)}
+            />
+            <input
+              type="text"
+              className="travel-select"
+              name="hour"
+              placeholder="Saat"
+              value={travelDetail.hour}
               onChange={(e) => onChangeTravelHandler(e)}
             />
 

@@ -1,0 +1,24 @@
+.purchase-result-informations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+    gap: 70px;
+}
+
+.purchase-result-root{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase-result-customer{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgb(37, 37, 37);
+    color: white;
+    border-radius: 20px;
+}

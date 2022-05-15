@@ -1,0 +1,7 @@
+.ticket-result-div{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    background-color: rgb(232, 190, 238);
+    border-radius: 20px;
+}
