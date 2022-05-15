@@ -7,7 +7,7 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 0,
+    reserved:  0,
     number: 2,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
