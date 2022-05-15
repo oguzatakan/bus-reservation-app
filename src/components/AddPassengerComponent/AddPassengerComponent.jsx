@@ -18,14 +18,14 @@ const AddPassengerComponent = (props) => {
             x
           </button>
         </div>
-        <h3 style={{ color: "white" }}>Secilen Koltuk No: {number}</h3>
+        <h3 style={{ color: "white" }}>Seçilen Koltuk No: {number}</h3>
         {/* <label for="fname">Isim</label> */}
         <input
           className="add-passenger__form__input"
           type="text"
           id="name"
           name="name"
-          placeholder="adiniz.."
+          placeholder="Adınız.."
           onChange={(e) => props.onChange(e, number)}
         />
 
@@ -35,7 +35,7 @@ const AddPassengerComponent = (props) => {
           className="add-passenger__form__input"
           id="surname"
           name="surname"
-          placeholder="soyadiniz.."
+          placeholder="Soyadınız.."
           onChange={(e) => props.onChange(e, number)}
         />
 
@@ -45,7 +45,7 @@ const AddPassengerComponent = (props) => {
           className="add-passenger__form__input"
           id="tcNo"
           name="tcNo"
-          placeholder="tc kimlik.."
+          placeholder="TC Kimlik No.."
           onChange={(e) => props.onChange(e, number)}
         />
 
@@ -58,7 +58,7 @@ const AddPassengerComponent = (props) => {
         >
           <option value="none">Cinsiyet</option>
           <option value="male">Erkek</option>
-          <option value="female">Kadin</option>
+          <option value="female">Kadın</option>
         </select>
       </form>
     </div>

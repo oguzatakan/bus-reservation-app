@@ -12,6 +12,7 @@ const TripDetails = (props) => {
     plate,
     from,
     to,
+    hour,
     seats,
     date,
   } = props.data;
@@ -23,11 +24,12 @@ const TripDetails = (props) => {
       <div className="trip-details__components">
         <div className="trip-details-company">
           <span className="trip-details-company-text">{company}</span>
-          <span className="trip-details-company-text">{price}</span>
+          <span className="trip-details-company-text">Bilet Tutarı :{" "}{price}₺</span>
         </div>
 
+
         <div className="trip-details-row">
-          <span className="trip-details-text">{date}</span>
+          <span className="trip-details-text">{date} / {hour}</span>
         </div>
 
         <div className="trip-details-row">
@@ -39,7 +41,7 @@ const TripDetails = (props) => {
         </div>
 
         <div className="trip-details-row">
-          <span className="trip-details-text">Seyahat Suresi: {duration}</span>
+          <span className="trip-details-text">Seyahat Süresi: {duration}</span>
           <span className="trip-details-text">
             Koltuk Sayisi {busType === 1 ? "33" : "44"}
           </span>

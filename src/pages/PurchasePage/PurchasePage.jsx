@@ -119,18 +119,19 @@ const PurchasePage = () => {
 
   return (
     <div className="purchase-page-div">
-      <h1>PurchasePage</h1>
+      <h2>Bilet Satış Onay Sayfası</h2>
 
       <div className="purchase-page-customer">
-        <h1>Odeme Bilgileri</h1>
+        <h2>Ödeme Bilgileri</h2>
         {travel && (
           <div className="purchase-page-info">
-            <h2>
+            <h3>
               {travel.from}-{travel.to}
-            </h2>
-            <h2>{travel.date}</h2>
-            <h2>{travel.company}</h2>
-            <h2>Toplam Tutar:{" "}{travel.price * selectedSeatData.length}₺</h2>
+            </h3>
+            <h3>{travel.date}</h3>
+            <h3>{travel.hour}</h3>
+            <h3>{travel.company}</h3>
+            <h3>Toplam Tutar:{" "}{travel.price * selectedSeatData.length}₺</h3>
           </div>
         )}
         <input
@@ -164,6 +165,14 @@ const PurchasePage = () => {
           onChange={(e) => onChangeCustomerHandler(e)}
         />
         <input
+          type="text"
+          className="travel-select"
+          name="hour"
+          placeholder="Saat"
+          value={customerDetail.hour}
+          onChange={(e) => onChangeCustomerHandler(e)}
+        />
+        <input
           className="travel-select"
           name="expireDate"
           placeholder="Expire Date"
@@ -192,7 +201,7 @@ const PurchasePage = () => {
         })}
       </div>
       <button className="travel-btn" onClick={() => onPurchase()}>
-        Satin Al
+        Öde
       </button>
     </div>
   );

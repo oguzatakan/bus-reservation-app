@@ -624,7 +624,7 @@ export const initialData = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     busType: 2,
     price: 210,
     company: "Metro",
@@ -969,24 +969,24 @@ export const initialData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     busType: 2,
-    price: 210,
+    price: 270 ,
     company: "Truva",
     from: "Edirne",
-    plate: "22 DE 30",
+    plate: "37 AK 30",
     to: "Canakkale",
-    date: "2022-05-14",
-    hour: "22.00",
-    duration: "1.5 saat",
+    date: "2022-05-16",
+    hour: "18.30",
+    duration: "210 Dakika",
     seats: [
       {
         selected: 0,
         reserved: 1,
         number: 1,
         passenger: {
-          name: "Ahmet",
-          surname: "Solmaz",
+          name: "Alaaddin",
+          surname: "Rasim",
           gender: "male",
           tcNo: "12345678910",
         },
@@ -999,9 +999,13 @@ export const initialData = [
       },
       {
         selected: 0,
-        reserved: 0,
+        reserved: 1,
         number: 3,
-        passenger: { name: "", surname: "", gender: "", tcNo: "" },
+        passenger: { 
+          name: "Kemal",
+          surname: "Can",
+          gender: "male",
+          tcNo: "90876543211" },
       },
       {
         selected: 0,

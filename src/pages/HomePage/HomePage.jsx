@@ -16,7 +16,7 @@ const HomePage = () => {
       </div>
 
       <div className="project-name-div">
-        <h1>Otobus Bilet Projesi</h1>
+        <h1>Otobüs Bilet Projesi</h1>
       </div>
 
       <TravelSelection />

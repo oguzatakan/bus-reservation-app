@@ -38,7 +38,7 @@ const TicketScreen = () => {
   return (
     <div className="ticket-screen-div">
       <button className="ticket-screen-back-btn" onClick={() => onClick()}>
-        Anasayfa
+        Anasayfaya Geri Dön
       </button>
       <select
         className="travel-select"

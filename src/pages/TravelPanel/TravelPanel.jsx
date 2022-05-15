@@ -91,19 +91,19 @@ const TravelPanel = () => {
       {login == true ? (
         <div>
           <div className="purchase-page-customer">
-            <h3>Seyahat Oluşturma</h3>
+            <h3>Seyahat Oluşturma Paneli</h3>
             <input
               className="travel-select"
               type="number"
               name="price"
-              placeholder="Price"
+              placeholder="Tutar (₺)"
               value={travelDetail.price}
               onChange={(e) => onChangeTravelHandler(e)}
             />
             <select
               className="travel-select"
               name="company"
-              placeholder="Company"
+              placeholder="Şirket İsmi"
               value={travelDetail.company}
               onChange={(e) => onChangeTravelHandler(e)}
             >
@@ -149,14 +149,14 @@ const TravelPanel = () => {
               type="text"
               className="travel-select"
               name="duration"
-              placeholder="Duration"
+              placeholder="Seyehat Süresi (Dk)"
               value={travelDetail.duration}
               onChange={(e) => onChangeTravelHandler(e)}
             />
             <input
               className="travel-select"
               name="plate"
-              placeholder="Plate"
+              placeholder="Araç Plakası"
               value={travelDetail.plate}
               onChange={(e) => onChangeTravelHandler(e)}
             />
@@ -174,7 +174,7 @@ const TravelPanel = () => {
               type="date"
               className="travel-select"
               name="date"
-              placeholder="Tarih"
+              placeholder="Seyehat Tarihi"
               value={travelDetail.date}
               onChange={(e) => onChangeTravelHandler(e)}
             />

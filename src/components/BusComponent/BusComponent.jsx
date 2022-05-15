@@ -40,7 +40,7 @@ const BusComponent = (props) => {
             onClick={() => applySelection()}
             className="bus-component__buy_button"
           >
-            Satin Al
+            Bilet Satın Al
           </button>
         ) : (
           <div></div>
