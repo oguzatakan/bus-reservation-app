@@ -22,7 +22,7 @@ const HomePage = () => {
       <TravelSelection />
 
       <div className="name-div">
-        <span>Atakan OGUZ</span>
+        <span>Atakan OĞUZ</span>
         <span>1191602092</span>
       </div>
     </div>
