@@ -3,7 +3,7 @@ export const initialData = [
     id: 1,
     busType: 1,
     company: "Metro",
-    price: "250 ₺",
+    price: 250,
     from: "Edirne",
     plate: "22 AT 28",
     to: "Ankara",
@@ -281,7 +281,7 @@ export const initialData = [
   {
     id: 2,
     busType: 2,
-    price: "230 ₺",
+    price: 230,
     company: "Nilufer",
     from: "Edirne",
     plate: "22 DE 30",
@@ -626,7 +626,7 @@ export const initialData = [
   {
     id: 4,
     busType: 2,
-    price: "210 ₺",
+    price: 210,
     company: "Metro",
     from: "Edirne",
     plate: "22 DE 30",
@@ -971,7 +971,7 @@ export const initialData = [
   {
     id: 3,
     busType: 2,
-    price: "230 ₺",
+    price: 210,
     company: "Truva",
     from: "Edirne",
     plate: "22 DE 30",

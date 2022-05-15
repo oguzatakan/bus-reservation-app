@@ -42,6 +42,7 @@ const TravelPanel = () => {
     let data = travelDetail;
     if (newTravelDataChecker(data) == false) {
       data.id = Math.random();
+      data.price = Number(data.price);
       if (travelDetail.busType == 1) {
         data.seats = busType1;
       } else {
@@ -69,6 +70,7 @@ const TravelPanel = () => {
         <h3>Seyahat Oluşturma</h3>
         <input
           className="travel-select"
+          type="number"
           name="price"
           placeholder="Price"
           value={travelDetail.price}

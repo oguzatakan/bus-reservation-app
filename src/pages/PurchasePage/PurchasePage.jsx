@@ -122,7 +122,17 @@ const PurchasePage = () => {
       <h1>PurchasePage</h1>
 
       <div className="purchase-page-customer">
-        <h3>Odeme Bilgileri</h3>
+        <h1>Odeme Bilgileri</h1>
+        {travel && (
+          <div className="purchase-page-info">
+            <h2>
+              {travel.from}-{travel.to}
+            </h2>
+            <h2>{travel.date}</h2>
+            <h2>{travel.company}</h2>
+            <h2>Toplam Tutar:{" "}{travel.price * selectedSeatData.length}₺</h2>
+          </div>
+        )}
         <input
           className="travel-select"
           name="name"
