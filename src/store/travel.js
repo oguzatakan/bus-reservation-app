@@ -14,6 +14,11 @@ export const userSlice = createSlice({
       purchaseOperation(state, action);
       state.selectedSeatData = [];
     },
+    addTravel: (state, action) => {
+      let arr = state.travels;
+      arr.push(action.payload.travel);
+      state.travels = arr;
+    },
     updatePassengerData: (state, action) => {
       state.selectedSeatData = updatePassengerDataOperation(state, action);
     },
@@ -27,7 +32,9 @@ export const userSlice = createSlice({
   },
 });
 
+
 export const {
+  addTravel,
   purchase,
   updatePassengerData,
   selectDeselect,

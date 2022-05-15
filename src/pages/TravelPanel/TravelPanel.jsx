@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { busType1 } from "../../data/busType1";
 import { busType2 } from "../../data/busType2";
+import { newTravelDataChecker } from "../../helper/dataChecker";
+import { addTravel } from "../../store/travel";
 import "./TravelPanel.css";
 const TravelPanel = () => {
   const [travelDetail, setTravelDetail] = useState({
+    id: 0,
     busType: 0,
     price: "",
     company: "Metro",
@@ -29,14 +34,27 @@ const TravelPanel = () => {
     { value: "Istanbul-Samandira", name: "Istanbul Samandira Otogari" },
   ];
 
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
   const onClick = () => {
     let data = travelDetail;
-    if (travelDetail.busType == 1) {
-      data.seats = busType1;
+    if (newTravelDataChecker(data) == false) {
+      data.id = Math.random();
+      if (travelDetail.busType == 1) {
+        data.seats = busType1;
+      } else {
+        data.seats = busType2;
+      }
+      dispatch(addTravel({ travel: data }));
+
+      console.log(travelDetail);
+      alert("Sefer başarılı biçimde oluşturuldu.");
+      navigate("/");
     } else {
-      data.seats = busType2;
+      alert("Lütfen Alanların Tam Dolu Olduğundan Emin Olunuz.");
     }
-    console.log(travelDetail);
   };
 
   const onChangeTravelHandler = (e) => {

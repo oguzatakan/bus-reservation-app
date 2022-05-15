@@ -1,7 +1,7 @@
 export const busType2 = [
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 1,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
@@ -19,7 +19,7 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 4,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
@@ -31,13 +31,13 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 6,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 7,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
@@ -55,7 +55,7 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 10,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
@@ -67,19 +67,19 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 12,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 13,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 14,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
@@ -91,7 +91,7 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 16,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
@@ -103,7 +103,7 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 18,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
@@ -176,7 +176,7 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 30,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
@@ -224,13 +224,13 @@ export const busType2 = [
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 38,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
   {
     selected: 0,
-    reserved: 1,
+    reserved: 0,
     number: 39,
     passenger: { name: "", surname: "", gender: "", tcNo: "" },
   },
