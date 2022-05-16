@@ -23,6 +23,7 @@ const PurchaseResult = () => {
         <h2>{`İsim: ${data?.name}`}</h2>
         <h2>{`Nereden - Nereye: ${data?.travel.from} - ${data?.travel.to}`}</h2>
         <h2>{`Bilet Tutarı: ${data?.travel.price}`}</h2>
+        <h2>{`Otobüs Numarası: ${data?.travel.company} - ${data?.travel.id}`}</h2>
       </div>
 
       <div className="purchase-result-informations">
