@@ -7,7 +7,7 @@ export const initialData = [
     from: "Edirne",
     plate: "22 AT 28",
     to: "Ankara",
-    date: "2022-05-14",
+    date: "2022-05-30",
     hour: "15.00",
     duration: "2 saat",
     seats: [
