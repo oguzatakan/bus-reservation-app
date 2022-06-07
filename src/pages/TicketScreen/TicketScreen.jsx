@@ -55,7 +55,7 @@ const TicketScreen = () => {
       </select>
 
       {applyFilter(travelData).length == 0 ? (
-        <h2>Sefer Bulunamadi!</h2>
+        <h2>Sefer Bulunamadı!</h2>
       ) : (
         <List data={applyFilter(travelData)} />
       )}

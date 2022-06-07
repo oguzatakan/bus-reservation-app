@@ -73,9 +73,9 @@ const PurchasePage = () => {
 
     if (passengerCheckError == false && purchaseCheckError == false) {
       alert(
-        "satin alindi!\nLutfen: " +
+        "Biletiniz Başarı ile Satın Alındı!\nLütfen: " +
           customerDetail.email +
-          " isimli eposta adresinizi kontrol edin."
+          " isimli e-posta adresinizi kontrol ediniz. Hayırlı Yolculuklar!"
       );
 
       dispatch(
@@ -97,12 +97,12 @@ const PurchasePage = () => {
     } else {
       if (passengerCheckError == true) {
         alert(
-          "Lutfen tum alanlari eksiksiz ve dogru olarak doldurun! \n\n- Tc no 11 karakter olmali \n- Ad, Soyad ve Cinsiyet alanlari bos birakilmamali"
+          "Lütfen tüm alanları eksiksiz ve doğru olarak doldurun! \n\n- TC Numarası 11 karakter olmalı \n- Ad, Soyad ve Cinsiyet alanları boş bırakılmamalı"
         );
       }
       if (purchaseCheckError == true) {
         alert(
-          "Lutfen odemeyle alakali bilgileri eksiksiz ve dogru olarak doldurun!"
+          "Lütfen ödemeyle alakalı bilgileri eksiksiz ve doğru olarak doldurun!"
         );
       }
     }
