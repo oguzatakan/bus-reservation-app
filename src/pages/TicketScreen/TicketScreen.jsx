@@ -24,7 +24,7 @@ const TicketScreen = () => {
   };
 
   const comppanies = [
-    { value: "", name: "Secim yapiniz.." },
+    { value: "", name: "Seçim Yapınız.." },
     { value: "Metro", name: "Metro" },
     { value: "Nilufer", name: "Nilufer" },
     { value: "Truva", name: "Truva" },

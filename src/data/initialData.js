@@ -7,7 +7,7 @@ export const initialData = [
     from: "Edirne",
     plate: "22 AT 28",
     to: "Ankara",
-    date: "2022-05-30",
+    date: "2022-06-09",
     hour: "15.00",
     duration: "2 saat",
     seats: [
@@ -286,7 +286,7 @@ export const initialData = [
     from: "Edirne",
     plate: "22 DE 30",
     to: "Ankara",
-    date: "2022-05-13",
+    date: "2022-06-09",
     hour: "10.00",
     duration: "1.5 saat",
     seats: [
@@ -631,7 +631,7 @@ export const initialData = [
     from: "Edirne",
     plate: "22 DE 30",
     to: "Canakkale",
-    date: "2022-05-14",
+    date: "2022-06-09",
     hour: "8.00",
     duration: "1.5 saat",
     seats: [
@@ -976,7 +976,7 @@ export const initialData = [
     from: "Edirne",
     plate: "37 AK 30",
     to: "Canakkale",
-    date: "2022-05-16",
+    date: "2022-06-10",
     hour: "18.30",
     duration: "4.30 Saat",
     seats: [
@@ -1325,7 +1325,7 @@ export const initialData = [
     from: "Edirne",
     plate: "22 AK 75",
     to: "Canakkale",
-    date: "2022-05-16",
+    date: "2022-06-10",
     hour: "12.00",
     duration: "4 Saat",
     seats: [
@@ -1670,7 +1670,7 @@ export const initialData = [
     from: "Edirne",
     plate: "22 AT 28",
     to: "Canakkale",
-    date: "2022-05-16",
+    date: "2022-06-10",
     hour: "14.00",
     duration: "2 Saat",
     seats: [
@@ -1949,7 +1949,7 @@ export const initialData = [
     from: "Edirne",
     plate: "22 KL 43",
     to: "Canakkale",
-    date: "2022-05-16",
+    date: "2022-06-10",
     hour: "15.00",
     duration: "4.30 Saat",
     seats: [

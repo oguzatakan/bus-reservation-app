@@ -10,24 +10,36 @@
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("https://iatkv.tmgrup.com.tr/0d865e/600/314/0/104/724/483?u=https://itkv.tmgrup.com.tr/2019/01/02/hadi-ipucu-sorusu-farsca-gokyuzu-ne-demek-gokyuzu-anlamina-gelen-isim-nedir-2-ocak-hadi-yarismasi-1546417173627.jpg");
+  background-image: url("https://images.pexels.com/photos/4242891/pexels-photo-4242891.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 
 .project-name-div {
   margin: 20px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
+.project-name {
+  text-align: center;
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.432);
+  color: rgb(0, 0, 0);
+  border: solid 1px rgb(0, 0, 0);
+  
+}
+
 .name-div {
-  margin: 25vh 40px 20px;
+  margin: 22vh 40px 20px;
   font-weight: 700;
   font-size: 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
+  color: white;
+
 }
 
 .admin-img:hover {

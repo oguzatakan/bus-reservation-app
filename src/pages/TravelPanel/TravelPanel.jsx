@@ -162,7 +162,7 @@ const TravelPanel = () => {
             <input
               className="travel-select"
               name="plate"
-              placeholder="Araç Plakası"
+              placeholder="Araç Plakası(*(11 AA 11))"
               value={travelDetail.plate}
               onChange={(e) => onChangeTravelHandler(e)}
             />
@@ -170,7 +170,7 @@ const TravelPanel = () => {
               type="text"
               className="travel-select"
               name="hour"
-              placeholder="Saat"
+              placeholder="Saat(*(21.30))"
               value={travelDetail.hour}
               onChange={(e) => onChangeTravelHandler(e)}
             />

@@ -145,14 +145,14 @@ const PurchasePage = () => {
         <input
           className="travel-select"
           name="name"
-          placeholder="Name"
+          placeholder="İsim"
           value={customerDetail.name}
           onChange={(e) => onChangeCustomerHandler(e)}
         />
         <input
           className="travel-select"
           name="surname"
-          placeholder="Surname"
+          placeholder="Soyisim"
           value={customerDetail.surname}
           onChange={(e) => onChangeCustomerHandler(e)}
         />
@@ -160,7 +160,7 @@ const PurchasePage = () => {
         <input
           className="travel-select"
           name="email"
-          placeholder="Email"
+          placeholder="E-mail"
           value={customerDetail.email}
           onChange={(e) => onChangeCustomerHandler(e)}
         />
@@ -168,14 +168,14 @@ const PurchasePage = () => {
           type="text"
           className="travel-select"
           name="cardNumber"
-          placeholder="Card Number"
+          placeholder="Kart Numarası"
           value={customerDetail.cardNumber}
           onChange={(e) => onChangeCustomerHandler(e)}
         />
         <input
           className="travel-select"
           name="expireDate"
-          placeholder="Expire Date"
+          placeholder="Son Kullanım Tarihi"
           value={customerDetail.expireDate}
           onChange={(e) => onChangeCustomerHandler(e)}
         />
